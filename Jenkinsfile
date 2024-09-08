@@ -4,7 +4,8 @@ pipeline{
     stages{
         stage("zip the file"){
             steps{
-                sh 'zip ansible-${BUILD_ID}.zip * --exclude Jenkinsfile || echo ""'
+                sh 'rm -rf *.zip  || echo ""' //because we are keeping the old artifact in our new zip file
+                sh 'zip ansible-${BUILD_ID}.zip * --exclude Jenkinsfile'
             }
         }
         stage("Upload artifact in JFrog"){
