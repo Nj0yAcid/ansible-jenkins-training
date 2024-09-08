@@ -15,9 +15,13 @@
       register: pid_output
     
     - name: Kill running app
-      shell: kill -9 {{pid.output.stdout}}
+      shell: kill -9 "{{pid.output.stdout}}"
       when: pid.output.stdout != ''
-    
+    - name: print pid_output
+      debug:
+        var: print pid_output
+      tags:
+        - a
     - name: Download new artifact
       get_url:
         url: http://ec2-18-205-235-142.compute-1.amazonaws.com:8081/artifactory/geolocation/geo/bio_17.jar
