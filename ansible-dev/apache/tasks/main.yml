@@ -1,0 +1,12 @@
+---
+- name: Install Apache webservers
+  become: true
+  apt:
+    name: apache2
+    state: present
+  
+- name: start apache services
+  become: true
+  service:
+    name: apache2 
+    state: started

@@ -1,0 +1,29 @@
+2024-09-08 13:27:42,585 p=4576 u=ec2-user n=ansible | 172.31.47.12 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.7"
+    },
+    "append": false,
+    "changed": false,
+    "comment": "",
+    "group": 1002,
+    "home": "/home/john",
+    "move_home": false,
+    "name": "john",
+    "shell": "/bin/bash",
+    "state": "present",
+    "uid": 1002
+}
+2024-09-08 13:32:14,508 p=4968 u=ec2-user n=ansible | 172.31.17.201 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-09-08 13:32:14,512 p=4968 u=ec2-user n=ansible | 172.31.47.12 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.7"
+    },
+    "changed": false,
+    "ping": "pong"
+}

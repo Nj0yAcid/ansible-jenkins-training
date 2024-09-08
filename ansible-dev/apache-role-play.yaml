@@ -1,0 +1,6 @@
+---
+- name: install web servers
+  hosts: databaseservers
+  become: true
+  roles:
+    - apache
